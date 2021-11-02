@@ -1,0 +1,16 @@
+{
+  "usuarios": [
+    {
+      "nombre": "Juan",
+      "apellido": "suarez",
+      "correo": "juanseu3@hotmail.com",
+      "id": 1
+    },
+    {
+      "nombre": "Juan",
+      "apellido": "suarez ramirez",
+      "correo": "juanseu3@hotmail.com",
+      "id": 2
+    }
+  ]
+}
