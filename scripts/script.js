@@ -92,65 +92,6 @@ const showProductsCart = async () => {
     itemsShoppingCart.appendChild(fragmentShoppingCart);
 }
 
-
-
-// const btnDelete = document.querySelector(".btn-delete");
-
-// btnDelete.addEventListener('click', () => {
-//         alert("Hola")
-//     })
-
-
-// const btnAdd = document.getElementById("btn-add");
-
-
-
-// const addProducts = async () => {
-//     const btnAdd = document.getElementById("btn-add");
-//     btnAdd.addEventListener('click', () => {
-//         alert("Hola")
-// let response = await fetch(urlShoppingCart);
-// let data = await response.json();
-// console.log(response)
-// return data;
-//     })
-// };
-
-
-// btnDelete.onclick = async function (e) {
-//     alert("funciona")
-
-//     id = product.id
-//     name = product.name
-//     price = product.price
-
-//     await fetch(urlShoppingCart, {
-//         method: 'POST',
-//         body: JSON.stringify({
-//             id,
-//             name,
-//             price
-//         }),
-//         headers: {
-//             "Content-Type": "application/json; charset=UTF-8"
-//         }
-//     })
-//     e.preventDefault();
-// }
-
-// window.onload = function (){
-//     const btnAdd = document.getElementById("btn-add");
-//     btnAdd.addEventListener('click', () => {
-//         alert("Hola")
-// let response = await fetch(urlShoppingCart);
-// let data = await response.json();
-// console.log(response)
-// return data;
-//     })
-// }
-
-
-
 document.addEventListener('DOMContentLoaded', () => {
     showProducts()
     showProductsCart()

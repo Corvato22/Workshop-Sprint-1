@@ -4,6 +4,16 @@
       "id": 2,
       "name": "Fresh Stripe Sweater",
       "price": 85
+    },
+    {
+      "id": 3,
+      "name": "Fresh Black Tie-Dye Hoodie",
+      "price": 75
+    },
+    {
+      "id": 4,
+      "name": "Crown Sweatshirt",
+      "price": 45
     }
   ]
 }

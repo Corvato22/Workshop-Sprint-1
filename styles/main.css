@@ -179,6 +179,13 @@ nav {
     line-height: 32px;
 }
 
+.card {
+    position: relative;
+    flex-direction: row;
+}
+
+margin
+
 /*FOOTER*/
 
 footer {
