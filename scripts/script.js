@@ -9,7 +9,6 @@ let items = document.getElementById("items");
 let templateShoppingCart = document.getElementById("template-shopping-cart").content;
 let fragmentShoppingCart = document.createDocumentFragment();
 let itemsShoppingCart = document.getElementById("itemsShoppingCart");
-let btnDelete = document.getElementById("btnDelete");
 
 const getProducts = async () => {
     let response = await fetch(urlProducts);
@@ -23,7 +22,6 @@ const showProducts = async () => {
     let products = await getProducts();
     products.forEach(product => {
         const { name, price, images } = product
-
         templateCard.getElementById("productTitle").textContent = name;
         templateCard.getElementById("image").setAttribute("src", images[0]);
         templateCard.getElementById("price").textContent = price;
@@ -32,7 +30,6 @@ const showProducts = async () => {
     });
     items.appendChild(fragmentCards);
 }
-
 
 const getProductsCart = async () => {
     let response = await fetch(urlShoppingCart);
@@ -48,23 +45,67 @@ const showProductsCart = async () => {
         templateShoppingCart.getElementById("idProduct").textContent = id;
         templateShoppingCart.getElementById("name").textContent = name;
         templateShoppingCart.getElementById("price").textContent = price;
-        templateShoppingCart.getElementById("btnDelete").setAttribute("id", product.id);
+        templateShoppingCart.querySelector("btn-delete").setAttribute("id", product.id);
+        templateShoppingCart.getElementById(product.id).addEventListener("click", () =>{
+            alert("funciona")
+        })
+
         const clone = templateShoppingCart.cloneNode(true);
         fragmentShoppingCart.appendChild(clone);
-    });
+    })
     itemsShoppingCart.appendChild(fragmentShoppingCart);
 }
 
+// const btnDelete = document.getElementById(product.id);
+// const btnAdd = document.getElementById("btn-add");
 
 
-// btnDelete.addEventListener('click', async () => {
-//     let idModificar = document.getElementById('id').value;
-//     let resp = await fetch(`http://localhost:4002/products/${idModificar}`, {
-//         method: 'DELETE',
+
+// const addProducts = async () => {
+//     const btnAdd = document.getElementById("btn-add");
+//     btnAdd.addEventListener('click', () => {
+//         alert("Hola")
+//         // let response = await fetch(urlShoppingCart);
+//         // let data = await response.json();
+//         // console.log(response)
+//         // return data;
 //     })
-//     let data = resp.json();
-//     console.log(data);
-// })
+// };
+
+
+// btnDelete.onclick = async function (e) {
+//     alert("funciona")
+
+//     id = product.id
+//     name = product.name
+//     price = product.price
+
+//     await fetch(urlShoppingCart, {
+//         method: 'POST',
+//         body: JSON.stringify({
+//             id,
+//             name,
+//             price
+//         }),
+//         headers: {
+//             "Content-Type": "application/json; charset=UTF-8"
+//         }
+//     })
+//     e.preventDefault();
+// }
+
+// window.onload = function (){
+//     const btnAdd = document.getElementById("btn-add");
+//     btnAdd.addEventListener('click', () => {
+//         alert("Hola")
+//         // let response = await fetch(urlShoppingCart);
+//         // let data = await response.json();
+//         // console.log(response)
+//         // return data;
+//     })
+// }
+
+
 
 document.addEventListener('DOMContentLoaded', () => {
     showProducts()
