@@ -25,7 +25,7 @@
                 </ul>
             </nav>
             <div class="icons">
-                <li><a href="index.html"><img class="header-icon" src="./img/icon-user.png" alt=""></a></li>
+                <li><a href="register.html"><img class="header-icon" src="./img/icon-user.png" alt=""></a></li>
                 <li><a href="index.html"><img class="header-icon" src="./img/icon-shopping.png" alt=""></a></li>
             </div>
         </div>
@@ -33,20 +33,18 @@
 
     <div class="container-body">
         <div class="container-imagenes-laterales">
-            <img class="imagenes-laterales" src="/img/01.png">
-            <img class="imagenes-laterales" src="/img/02.png">
-            <img class="imagenes-laterales" src="/img/03.png">
-            <img class="imagenes-laterales" src="/img/04.png">
+            <img id="thumbnail_1" class="imagenes-laterales" src="/img/01.png">
+            <img id="thumbnail_2" class="imagenes-laterales" src="/img/02.png">
+            <img id="thumbnail_3" class="imagenes-laterales" src="/img/03.png">
         </div>
         <div class="container-imagenes-principales">
-            <img class="imagenes-principales" src="/img/01.png">
-            <img class="imagenes-principales" src="/img/02.png">
-            <img class="imagenes-principales" src="/img/03.png">
-            <img class="imagenes-principales" src="/img/04.png">
+            <img id="main_image_1" class="imagenes-principales" src="/img/01.png">
+            <img id="main_image_2" class="imagenes-principales" src="/img/02.png">
+            <img id="main_image_3" class="imagenes-principales" src="/img/03.png">
         </div>
         <div class="container-datos-del-producto">
-            <h2 class="nombre-producto">Crown Sweatshirt</h2>
-            <p class="precio-producto">$ 80.00</p>
+            <h2 id="product_name" class="nombre-producto">Crown Sweatshirt</h2>
+            <p id="product_price" class="precio-producto">$ 80.00</p>
             <span>Size</span>
             <div class="container-tallas">
                 <a class="tallas active">S</a>
@@ -70,6 +68,52 @@
             </div>
         </div>
     </div>
+
+
+    <!-- Template Productos -->
+    <h2>
+        YOU MAY ALSO LIKE
+    </h2>
+    <div id="items" class="card"></div>
+
+    <div class="containerYouMayAlsoLike">
+        <template id="template-card">
+
+            <div class="card">
+                <div class="card-body">
+                    <h5 id="productTitle">Title</h5>
+                    <img id="image" src="" alt=""></img>
+                    <p id="price">Price</p>
+                    <button id="button" class="btn-add-cart">Add</button>
+                </div>
+            </div>
+        </template>
+    </div>
+
+    <!-- Template Carrito -->
+    <div class="container">
+        <h4>Shopping Cart</h4>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">ID.</th>
+                    <th scope="col">Item</th>
+                    <th scope="col">Precio</th>
+                </tr>
+            </thead>
+            <tbody id="itemsShoppingCart"></tbody>
+        </table>
+    </div>
+
+    <template id="template-shopping-cart">
+        <tr>
+            <th id="idProduct" scope="row"></th>
+            <td id="name"></td>
+            <td id="price">$ <span></span></td>
+            <td><button id="btnDelete">Delete</button></td>
+        </tr>
+    </template>
+
 
     <footer class="footer">
         <div id="cover"><img src="./img/freshprincecover.png" alt=""></div>
