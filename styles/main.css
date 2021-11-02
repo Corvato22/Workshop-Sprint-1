@@ -1,35 +1,4 @@
-
-*{
-    box-sizing: border-box;
-}
-footer {
-    background-color: black;
-    color: white;
-    }
-
-#cover img{
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    bottom: 245px;
-}
-#logo_footer{
-    position: relative;
-    display: flex;
-    justify-content: center;
-    padding: 50px;
-    width: 100%;
-
-}
-
-
-#redes_sociales{
-    display: flex;
-    justify-content: center;
-    padding:25px;
-}
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap');
-
 * {
     box-sizing: border-box;
 }
@@ -44,7 +13,9 @@ footer {
 /*HEADER*/
 
 .container-header {
-    position: fixed;
+    width: 100%;
+    background-color: var(--main-color);
+     padding: 0px 83px 0px 83px;
 }
 
 .header-sections {
@@ -54,11 +25,10 @@ footer {
 }
 
 nav {
-    position: fixed;
     width: 100%;
-  }
-  
-  .nav-list {
+}
+
+.nav-list {
     width: 100%;
 }
 
@@ -67,7 +37,7 @@ nav {
     justify-content: center;
     gap: 2rem;
     list-style: none;
-  }
+}
 
 .nav-item {
     text-decoration: none;
@@ -108,4 +78,32 @@ nav {
     flex-direction: column;
     width: 80px;
     margin-right: 24px
+}
+
+/*FOOTER*/
+
+footer {
+    background-color: black;
+    color: white;
+}
+
+#cover img {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    bottom: 245px;
+}
+
+#logo_footer {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+    width: 100%;
+}
+
+#redes_sociales {
+    display: flex;
+    justify-content: center;
+    padding: 25px;
 }
