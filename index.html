@@ -5,13 +5,33 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/styles/main.css">
-    <title>Fresh Prince</title>
+    <title>Príncipe Fresco</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+        integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./styles/main.css">
+    <link rel="shortcut icon" type="image/jpg" href="./img/logo.png" />
 </head>
 
 <body>
 
-    <div class="container">
+    <header class="container-header">
+        <div class="header-sections">
+            <a href="index.html"><img class="logo" src="./img/logo.png" alt="logo" /></a>
+            <nav class="navbar">
+                <ul class="nav-list">
+                    <li><a class="nav-item" href="#">Shop</a></li>
+                    <li><a class="nav-item" href="#">Collections</a></li>
+                </ul>
+            </nav>
+            <div class="icons">
+                <li><a href="index.html"><img class="header-icon" src="./img/icon-user.png" alt=""></a></li>
+                <li><a href="index.html"><img class="header-icon" src="./img/icon-shopping.png" alt=""></a></li>
+            </div>
+        </div>
+    </header>
+
+    <div class="container-body">
         <div class="container-imagenes-laterales">
             <img class="imagenes" src="/img/01.png">
             <img class="imagenes" src="/img/02.png">
@@ -40,7 +60,8 @@
                 <button class="compra-ahora">BUY IT NOW</button>
             </div>
             <div class="container-descripcion">
-                <p class="descripcion">Let them know you’re 90s royalty with this official The Fresh Prince crown pattern sweater. Throw
+                <p class="descripcion">Let them know you’re 90s royalty with this official The Fresh Prince crown
+                    pattern sweater. Throw
                     vintage vibes that
                     Uncle Phil would approve of. Featuring woven The Fresh Prince logo on chest. Navy crown print crew
                     neck sweatshirt with
@@ -50,8 +71,7 @@
         </div>
     </div>
 
-    <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
-    <script src="/scripts/script.js"></script>
+    <script src="./scripts/script.js"></script>
 </body>
 
 </html>
