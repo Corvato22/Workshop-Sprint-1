@@ -13,6 +13,10 @@
 
 /*HEADER*/
 
+.container-header {
+    position: fixed;
+}
+
 .header-sections {
     display: flex;
     justify-content: space-between;
@@ -25,36 +29,53 @@ nav {
   }
   
   .nav-list {
+    width: 100%;
+}
+
+.nav-list {
     display: flex;
     justify-content: center;
     gap: 2rem;
     list-style: none;
   }
 
-
-  .nav-item {
+.nav-item {
     text-decoration: none;
     text-transform: uppercase;
     font: var(--main-font-family);
     color: var(--varColor);
     font-weight: 100;
-  }
-  
-  .icons {
+}
+
+.icons {
     text-decoration: none;
     display: flex;
     justify-content: center;
     gap: 2rem;
     list-style: none;
-  }
-  
-  .header-icon {
-    text-transform: uppercase;
-    font: var(--main-font-family)
-    color: var(--varColor);
-    font-weight: 100;  
 }
 
-  .header-icon:hover{
-      cursor: pointer;
-  }
+.header-icon {
+    text-transform: uppercase;
+    font: var(--main-font-family);
+    color: var(--varColor);
+    font-weight: 100;
+}
+
+.header-icon:hover {
+    cursor: pointer;
+}
+
+/*BODY*/
+
+.container-body {
+    display: flex;
+    padding: 83px
+}
+
+.container-imagenes-laterales {
+    display: flex;
+    flex-direction: column;
+    width: 80px;
+    margin-right: 24px
+}
