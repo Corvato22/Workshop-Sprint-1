@@ -80,19 +80,19 @@
 
     <template class="container" id="template-card">
         <div class="col-3 mb-2">
-          <div class="card">
-            <div class="card-body">
-                <h5 id="productTitle">Title</h5>
-                <img id="image" src="" alt="" width="250" height="350"></img>
-                <p id="price">Price</p>
-                <button id="button" id="btn-add" class="btn btn-dark">Add</button>
+            <div class="card">
+                <div class="card-body">
+                    <h5 id="productTitle">Title</h5>
+                    <img id="image" src="" alt="" width="250" height="350"></img>
+                    <p id="price">Price</p>
+                    <button id="button" id="btn-add" class="btn btn-dark" onclick="postItem(this.id)">Add</button>
+                </div>
             </div>
-          </div>
         </div>
-      </template>
+    </template>
 
     <!-- Template Carrito -->
-    
+
     <div class="container">
         <h4>Shopping Cart</h4>
         <table class="table">
@@ -112,7 +112,7 @@
             <th id="idProduct" scope="row"></th>
             <td id="name"></td>
             <td id="price">$ <span></span></td>
-            <td><button id="btn-delete" class="btn-delete">Delete</button></td>
+            <td><button id="btn-delete" class="btnDelete" onclick="deleteItem(this.id)">Delete</button></td>
         </tr>
     </template>
 

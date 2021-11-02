@@ -13,8 +13,34 @@ let itemsShoppingCart = document.getElementById("itemsShoppingCart");
 const getProducts = async () => {
     let response = await fetch(urlProducts);
     let data = await response.json();
-    console.log(response)
     return data;
+}
+
+const postItem = async (item) => {
+
+    let response = await fetch(urlProducts);
+    let data = await response.json();
+    let dataBase = data.find(x => x.id == item)
+    console.log(dataBase)
+
+    let id = dataBase.id
+    let name = dataBase.name
+    let price = dataBase.price
+    console.log(id, name, )
+
+    await fetch(urlShoppingCart, {
+        method: 'POST',
+        body: JSON.stringify({
+            id,
+            name,
+            price
+        }),
+        headers: {
+            "Content-Type": "application/json; charset=UTF-8"
+        }
+    })
+
+    console.log("item", item)
 }
 
 //Cards
@@ -25,6 +51,8 @@ const showProducts = async () => {
         templateCard.getElementById("productTitle").textContent = name;
         templateCard.getElementById("image").setAttribute("src", images[0]);
         templateCard.getElementById("price").textContent = price;
+        templateCard.querySelector(".btn-dark").setAttribute("id", product.id);
+
         const clone = templateCard.cloneNode(true);
         fragmentCards.appendChild(clone);
     });
@@ -34,8 +62,19 @@ const showProducts = async () => {
 const getProductsCart = async () => {
     let response = await fetch(urlShoppingCart);
     let data = await response.json();
-    console.log(response)
     return data;
+}
+
+
+const deleteItem = async (item) => {
+    let idModificar = (item)
+    let resp = await fetch(`http://localhost:4002/products/${idModificar}`, {
+        method: 'DELETE',
+    })
+    let data = resp.json();
+    console.log(data);
+    console.log("item", item)
+    item.preventDefault()
 }
 
 const showProductsCart = async () => {
@@ -45,10 +84,7 @@ const showProductsCart = async () => {
         templateShoppingCart.getElementById("idProduct").textContent = id;
         templateShoppingCart.getElementById("name").textContent = name;
         templateShoppingCart.getElementById("price").textContent = price;
-        templateShoppingCart.querySelector("btn-delete").setAttribute("id", product.id);
-        templateShoppingCart.getElementById(product.id).addEventListener("click", () =>{
-            alert("funciona")
-        })
+        templateShoppingCart.querySelector(".btnDelete").setAttribute("id", product.id);
 
         const clone = templateShoppingCart.cloneNode(true);
         fragmentShoppingCart.appendChild(clone);
@@ -56,7 +92,15 @@ const showProductsCart = async () => {
     itemsShoppingCart.appendChild(fragmentShoppingCart);
 }
 
-// const btnDelete = document.getElementById(product.id);
+
+
+// const btnDelete = document.querySelector(".btn-delete");
+
+// btnDelete.addEventListener('click', () => {
+//         alert("Hola")
+//     })
+
+
 // const btnAdd = document.getElementById("btn-add");
 
 
@@ -65,10 +109,10 @@ const showProductsCart = async () => {
 //     const btnAdd = document.getElementById("btn-add");
 //     btnAdd.addEventListener('click', () => {
 //         alert("Hola")
-//         // let response = await fetch(urlShoppingCart);
-//         // let data = await response.json();
-//         // console.log(response)
-//         // return data;
+// let response = await fetch(urlShoppingCart);
+// let data = await response.json();
+// console.log(response)
+// return data;
 //     })
 // };
 
@@ -98,10 +142,10 @@ const showProductsCart = async () => {
 //     const btnAdd = document.getElementById("btn-add");
 //     btnAdd.addEventListener('click', () => {
 //         alert("Hola")
-//         // let response = await fetch(urlShoppingCart);
-//         // let data = await response.json();
-//         // console.log(response)
-//         // return data;
+// let response = await fetch(urlShoppingCart);
+// let data = await response.json();
+// console.log(response)
+// return data;
 //     })
 // }
 

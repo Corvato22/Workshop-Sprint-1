@@ -1,9 +1,9 @@
 {
-    "products": [
-        {
-            "id": 2,
-            "name": "Fresh Stripe Sweater",
-            "price": 85.00
-        }
-    ]
+  "products": [
+    {
+      "id": 2,
+      "name": "Fresh Stripe Sweater",
+      "price": 85
+    }
+  ]
 }
