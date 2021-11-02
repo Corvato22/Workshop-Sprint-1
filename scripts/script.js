@@ -34,8 +34,6 @@ const showProducts = async () => {
 }
 
 
-
-//ShoppingCart
 const getProductsCart = async () => {
     let response = await fetch(urlShoppingCart);
     let data = await response.json();
@@ -67,7 +65,6 @@ const showProductsCart = async () => {
 //     let data = resp.json();
 //     console.log(data);
 // })
-
 
 document.addEventListener('DOMContentLoaded', () => {
     showProducts()
