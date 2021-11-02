@@ -1,0 +1,18 @@
+:root {
+    --main-color: #FFFFFF;
+    --secondary-color: #1D1D1D;
+    --font-color: #3A3539;
+    --main-font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    display: flex;
+    padding: 83px
+}
+
+.container-imagenes-laterales{
+    display: flex;
+    flex-direction: column;
+    width:80px;
+    margin-right: 24px
+}
